@@ -1,120 +1,120 @@
-
 <!DOCTYPE html>
 <html lang="uz">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Car shop</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car shop</title>
 
 
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
-        <link rel="stylesheet" href="./style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
 
-    <div class="container">
+  <div class="container">
 
-        <header class="header">
+    <header class="header">
 
-            <div class="breadcrumb">
-                <a href="./index.html">Bosh sahifa</a>
-                <span>›</span>
-                <a href="./modellar.html">Modellari</a>
-                <span>›</span>
-                <p>Chevrolet turlari</p>
-            </div>
+      <div class="breadcrumb">
+        <a href="./index.html">Bosh sahifa</a>
+        <span>›</span>
+        <a href="./modellar.html">Modellari</a>
+        <span>›</span>
+        <p>Chevrolet turlari</p>
+      </div>
 
-            <button class="admin-btn">
-                ♙ Admin o'tish
-            </button>
+      <button class="admin-btn">
+        ♙ Admin o'tish
+      </button>
 
-        </header>
+    </header>
 
-        <h1>Modellari</h1>
+    <h1>Modellari</h1>
 
-        <section class="car-detail">
+    <section class="car-detail">
 
-            
 
-            <div class="inner">
 
-                <h2>CHEVROLET MALIBU</h2>
+      <div class="inner">
 
-                <p class="price">
-                    329 900 000 so'm dan
-                </p>
+        <h2>CHEVROLET MALIBU</h2>
 
-                <img class="small-car" src="./img/malibu1.png" alt="Chevrolet Malibu">
+        <p class="price">
+          329 900 000 so'm dan
+        </p>
 
-                <div class="inner-text">
+        <img class="small-car" src="./img/malibu1.png" alt="Chevrolet Malibu">
 
-                    <p><b>Marka:</b> <span>CHEVROLET</span></p>
+        <div class="inner-text">
 
-                    <p><b>Tanirovkasi:</b> <span>Yo'q</span></p>
+          <p><b>Marka:</b> <span>CHEVROLET</span></p>
 
-                    <p><b>Motor:</b> <span>1.6</span></p>
+          <p><b>Tanirovkasi:</b> <span>Yo'q</span></p>
 
-                    <p><b>Year:</b> <span>2016</span></p>
+          <p><b>Motor:</b> <span>1.6</span></p>
 
-                    <p><b>Color:</b> <span>Oq</span></p>
+          <p><b>Year:</b> <span>2016</span></p>
 
-                    <p><b>Distance:</b> <span>3000 km</span></p>
+          <p><b>Color:</b> <span>Oq</span></p>
 
-                    <p><b>Gearbook:</b> <span>Avtomat karobka</span></p>
+          <p><b>Distance:</b> <span>3000 km</span></p>
 
-                    <p class="description">
-                        <b>Description:</b>
-                        <span>
-                            Mishina ideal holatda krasska top toza 100tali.
-                            Ayol kishiniki judayam akuratno haydalgan.
-                        </span>
-                    </p>
+          <p><b>Gearbook:</b> <span>Avtomat karobka</span></p>
 
-                    <hr>
+          <p class="description">
+            <b>Description:</b>
+            <span>
+              Mishina ideal holatda krasska top toza 100tali.
+              Ayol kishiniki judayam akuratno haydalgan.
+            </span>
+          </p>
 
-                    <p class="total">
-                        <b>Umumiy xarajat:</b>
-                        <span>329 900 000 so'm dan</span>
-                    </p>
+          <hr>
 
-                </div>
+          <p class="total">
+            <b>Umumiy xarajat:</b>
+            <span>329 900 000 so'm dan</span>
+          </p>
 
-            </div>
+        </div>
 
-            
+      </div>
 
-            <div class="car-preview">
 
-                <h2>CHEVROLET MALIBU</h2>
 
-                <img class="big-car" src="./img/Rectangle 1973.png" alt="Chevrolet Malibu">
-                <p class="warning">
-                    Tasvir tanlangan konfiguratsiyaga mos kelmasligi mumkin.
-                    Mashinaning rangi ushbu saytda taqdim etilganidan farq qilishi mumkin.
-                </p>
+      <div class="car-preview">
 
-                <div class="car-options">
+        <h2>CHEVROLET MALIBU</h2>
 
-                    <label>
-                        <input type="radio" name="salon" value="tashqi" checked>
-                        Tashqi
-                    </label>
+        <img class="big-car" src="./img/Rectangle 1973.png" alt="Chevrolet Malibu">
+        <p class="warning">
+          Tasvir tanlangan konfiguratsiyaga mos kelmasligi mumkin.
+          Mashinaning rangi ushbu saytda taqdim etilganidan farq qilishi mumkin.
+        </p>
 
-                    <label>
-                        <input type="radio" name="salon" value="ichki">
-                        Ichki makon
-                    </label>
+        <div class="car-options">
 
-                </div>
+          <div class="car-options">
 
-            </div>
+            <label>
+              <input type="radio" name="salon" onchange="window.location.href='./ichki.html'" checked>
+              Tashqi
+            </label>
 
-        </section>
+            <label>
+              <input type="radio" name="salon" onchange="window.location.href='./ichki2.html'">
+              Ichki makon
+            </label>
+          </div>
+        </div>
 
-    </div>
+      </div>
+
+    </section>
+
+  </div>
 
 </body>
 

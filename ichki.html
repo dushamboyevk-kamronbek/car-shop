@@ -5,10 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Car shop</title>
-
+  <link rel="icon" type="image/png" href="./img/General_Motors_(2021).svg.webp">
 
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -25,19 +26,20 @@
         <p>Chevrolet turlari</p>
       </div>
 
-      <button class="admin-btn">
+      <button class="admin-btn" onclick="window.location.href='panel.html'">
         ♙ Admin o'tish
       </button>
 
     </header>
-
-    <h1>Modellari</h1>
+    <div data-aos="fade-right">
+      <h1>Modellari</h1>
+    </div>
 
     <section class="car-detail">
 
 
 
-      <div class="inner">
+      <div class="inner" data-aos="flip-up">
 
         <h2>CHEVROLET MALIBU</h2>
 
@@ -84,7 +86,7 @@
 
 
 
-      <div class="car-preview">
+      <div class="car-preview" data-aos="zoom-in-left">
 
         <h2>CHEVROLET MALIBU</h2>
 
@@ -105,7 +107,7 @@
 
             <label>
               <input type="radio" name="salon" onchange="window.location.href='./ichki2.html'">
-              Ichki makon
+              Salon
             </label>
           </div>
         </div>
@@ -115,7 +117,10 @@
     </section>
 
   </div>
-
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>

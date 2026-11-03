@@ -21,6 +21,7 @@ button {
     font-family: inherit;
 }
 
+
 /* CONTAINER */
 
 .container {
@@ -31,12 +32,13 @@ button {
     border: 2px solid #3085ff;
 }
 
+
 /* SIDEBAR */
 
 .sidebar {
     width: 226px;
     min-height: 100vh;
-    background-color: white;
+    background-color: #ffffff;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -47,27 +49,44 @@ button {
 .header-menu {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     gap: 22px;
     padding: 100px 25px 0;
 }
 
 .header-menu a {
+    width: 100%;
     display: flex;
     align-items: center;
     gap: 12px;
     color: #6f767e;
     font-size: 12px;
     font-weight: 500;
+    transition: 0.2s;
 }
 
 .header-menu a i {
     width: 17px;
     font-size: 16px;
+    color: #6f767e;
 }
 
 .header-menu a:hover {
     color: #3085ff;
 }
+
+.header-menu a:hover i {
+    color: #3085ff;
+}
+
+.header-menu .active {
+    color: #6f767e;
+}
+
+.header-menu .active i {
+    color: #202124;
+}
+
 
 /* THEME */
 
@@ -86,13 +105,17 @@ button {
     border-radius: 20px;
     background: transparent;
     color: #6f767e;
+    font-size: 13px;
 }
 
 .theme-toggle .light-btn {
     background-color: white;
+    color: #202124;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-/* MAIN */
+
+/* MAIN CONTENT */
 
 .main-content {
     flex: 1;
@@ -100,6 +123,7 @@ button {
     display: flex;
     flex-direction: column;
 }
+
 
 /* HEADER */
 
@@ -121,10 +145,15 @@ button {
     color: white;
     border-radius: 9px;
     font-size: 10px;
+    font-weight: 600;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
+}
+
+.back-btn i {
+    font-size: 14px;
 }
 
 .header-img-logo {
@@ -133,9 +162,26 @@ button {
     gap: 25px;
 }
 
-.bell {
+.notification {
+    position: relative;
     width: 18px;
     height: 18px;
+}
+
+.notification img {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+}
+
+.notification span {
+    width: 6px;
+    height: 6px;
+    background-color: #ff5e59;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: -2px;
 }
 
 .avatar {
@@ -144,6 +190,7 @@ button {
     border-radius: 50%;
     object-fit: cover;
 }
+
 
 /* SERVICE */
 
@@ -160,6 +207,7 @@ button {
     border-radius: 6px;
     padding: 16px;
 }
+
 
 /* SERVICE TOP */
 
@@ -186,6 +234,7 @@ button {
 .service-title h2 {
     font-size: 14px;
     font-weight: 600;
+    color: #202124;
 }
 
 .service-buttons {
@@ -205,6 +254,7 @@ button {
     font-weight: 600;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
 }
 
@@ -212,6 +262,13 @@ button {
 .add-car i {
     font-size: 12px;
 }
+
+.add-category:hover,
+.add-car:hover,
+.car-save:hover {
+    background-color: #176fe8;
+}
+
 
 /* TABLE */
 
@@ -223,6 +280,7 @@ button {
 table {
     width: 100%;
     border-collapse: collapse;
+    table-layout: auto;
 }
 
 thead {
@@ -263,6 +321,7 @@ tbody tr:hover {
     background-color: #f9f9f9;
 }
 
+
 /* PAGINATION */
 
 .pagination {
@@ -293,13 +352,18 @@ tbody tr:hover {
     cursor: pointer;
 }
 
-/* MODAL BLUR */
+.pagination span:first-of-type {
+    font-weight: 700;
+}
+
+
+/* MODAL OVERLAY */
 
 .modal-overlay {
     position: fixed;
     inset: 0;
 
-    background: rgba(0, 0, 0, 0.25);
+    background: rgba(255, 255, 255, 0.65);
 
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
@@ -317,74 +381,145 @@ tbody tr:hover {
     display: flex;
 }
 
+
 /* MODAL BOX */
 
-.modal-box {
-    width: 450px;
-    background-color: white;
+.car-modal-box {
+    width: 683px;
+    min-height: 172px;
+    background-color: #ffffff;
     border-radius: 12px;
-    padding: 25px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    padding: 20px 14px 18px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.10);
 }
+
 
 /* MODAL HEADER */
 
-.modal-header {
+.car-modal-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 25px;
+    margin-bottom: 18px;
 }
 
-.modal-header h2 {
-    font-size: 20px;
+.car-modal-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.car-title-mark {
+    width: 10px;
+    height: 19px;
+    background-color: #c9b5ff;
+    border-radius: 3px;
+}
+
+.car-modal-title h2 {
+    font-size: 12px;
     font-weight: 600;
+    color: #202124;
 }
 
-.close-modal {
-    width: 32px;
-    height: 32px;
+.car-close-modal {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: #eeeeee;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
-    background-color: #f2f2f2;
-    font-size: 24px;
-    color: #555;
+    color: #202124;
+    font-size: 11px;
 }
 
-/* CATEGORY FORM */
 
-.category-form {
+/* FORM */
+
+.car-form {
+    width: 100%;
+}
+
+.car-form-fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.car-field {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 6px;
 }
 
-.category-form label {
-    font-size: 13px;
+.car-field label:first-child {
+    font-size: 9px;
     font-weight: 600;
+    color: #202124;
 }
 
-.category-form input {
+
+/* INPUT */
+
+.car-field input[type="text"] {
     width: 100%;
-    height: 45px;
-    border: 1px solid #ddd;
+    height: 28px;
+    background-color: #f3f3f3;
+    border: none;
     border-radius: 8px;
-    padding: 0 12px;
-    outline: none;
+    padding: 0 8px;
     font-family: inherit;
+    font-size: 9px;
+    outline: none;
 }
 
-.category-form input:focus {
-    border-color: #3085ff;
+.car-field input[type="text"]:focus {
+    border: 1px solid #3085ff;
 }
 
-.save-category {
-    height: 42px;
+
+/* IMAGE UPLOAD */
+
+.car-upload {
+    width: 100%;
+    height: 28px;
+    background-color: #f3f3f3;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 8px;
+    color: #6f767e !important;
+    font-size: 9px !important;
+    font-weight: 400 !important;
+    cursor: pointer;
+}
+
+.car-upload i {
+    font-size: 12px;
+}
+
+
+/* MODAL FOOTER */
+
+.car-form-footer {
+    border-top: 1px solid #eeeeee;
+    margin-top: 10px;
+    padding-top: 14px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+/* SAVE BUTTON */
+
+.car-save {
+    width: 90px;
+    height: 28px;
     background-color: #3085ff;
     color: white;
     border-radius: 8px;
+    font-size: 9px;
     font-weight: 600;
-    margin-top: 10px;
 }

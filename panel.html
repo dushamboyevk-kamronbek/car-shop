@@ -1,286 +1,320 @@
+
 <!DOCTYPE html>
 <html lang="uz">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Car Shop Admin</title>
+    <title>Car Shop Admin</title>
 
-  <link rel="icon" href="./img/General_Motors_(2021).svg.webp">
+    <link rel="icon" href="./img/General_Motors_(2021).svg.webp">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
 
-  <link rel="stylesheet" href="./panel.css">
+    <link rel="stylesheet" href="./panel.css">
 
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
 
-  <div class="container">
+    <div class="container">
 
+        
+        <aside class="sidebar">
 
+            <nav class="header-menu">
 
-    <aside class="sidebar">
+                <a href="index.html" class="active">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Asosiy</span>
+                </a>
 
-      <nav class="header-menu">
+                <a href="#">
+                    <i class="fa-solid fa-store"></i>
+                    <span>E’lonlar</span>
+                </a>
 
-        <a href="./index.html">
-          <i class="fa-solid fa-house"></i>
-          Asosiy
-        </a>
+                <a href="#">
+                    <i class="fa-regular fa-pen-to-square"></i>
+                    <span>Savollar</span>
+                </a>
 
-        <a href="#">
-          <i class="fa-solid fa-store"></i>
-          E’lonlar
-        </a>
+            </nav>
 
-        <a href="#">
-          <i class="fa-regular fa-pen-to-square"></i>
-          Savollar
-        </a>
+            <div class="theme-toggle">
 
-      </nav>
+                <button class="light-btn">
+                    <i class="fa-solid fa-sun"></i>
+                </button>
 
-      <div class="theme-toggle">
-
-        <button class="light-btn">
-          <i class="fa-solid fa-sun"></i>
-        </button>
-
-        <button class="dark-btn">
-          <i class="fa-regular fa-moon"></i>
-        </button>
-
-      </div>
-
-    </aside>
-
-
-
-    <main class="main-content">
-
-      <header class="header">
-
-        <button class="back-btn" onclick="window.location.href='./index.html'">
-
-          <i class="fa-regular fa-user"></i>
-          Asosiyga qaytish
-
-        </button>
-
-        <div class="header-img-logo">
-
-          <img class="bell" src="./img/bell-regular-full.svg" alt="Bell">
-
-          <img class="avatar" src="./img/Avatar.png" alt="Avatar">
-
-        </div>
-
-      </header>
-
-
-
-      <section class="service">
-
-        <div class="service-card">
-
-          <div class="service-top">
-
-            <div class="service-title">
-
-              <span class="title-mark"></span>
-
-              <h2>Mashinalar</h2>
+                <button class="dark-btn">
+                    <i class="fa-regular fa-moon"></i>
+                </button>
 
             </div>
 
-            <div class="service-buttons">
+        </aside>
 
 
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
 
-              <a href="#categoryModal" class="add-category">
+            <!-- HEADER -->
+            <header class="header">
 
-                <i class="fa-solid fa-plus"></i>
-                Kategoriya qo'shish
+                <a href="./index.html" class="back-btn">
+                    <i class="fa-regular fa-user"></i>
+                    Asosiyga qaytish
+                </a>
 
-              </a>
+                <div class="header-img-logo">
 
-              <button class="add-car">
+                    <div class="notification">
+                        <img src="./img/bell-regular-full.svg" alt="Bell">
+                        <span></span>
+                    </div>
 
-                <i class="fa-solid fa-plus"></i>
-                Mashina qo'shish
+                    <img class="avatar" src="./img/Avatar.png" alt="Avatar">
 
-              </button>
+                </div>
 
-            </div>
-
-          </div>
-
-
-
-          <div class="table-wrapper">
-
-            <table>
-
-              <thead>
-
-                <tr>
-                  <th>#</th>
-                  <th>Markasi</th>
-                  <th>Gearbook</th>
-                  <th>Tanirovkasi</th>
-                  <th>Motor</th>
-                  <th>Year</th>
-                  <th>Color</th>
-                  <th>Distance</th>
-                  <th></th>
-                </tr>
-
-              </thead>
-
-              <tbody>
-
-                <tr>
-                  <td>1.</td>
-                  <td>CHEVROLET</td>
-                  <td>Avtomat karobka</td>
-                  <td>Yo'q</td>
-                  <td>1.6</td>
-                  <td>2016</td>
-                  <td>Oq</td>
-                  <td>3000km</td>
-                  <td><i class="fa-solid fa-arrow-right"></i></td>
-                </tr>
-
-                <tr>
-                  <td>2.</td>
-                  <td>CHEVROLET</td>
-                  <td>Avtomat karobka</td>
-                  <td>Yo'q</td>
-                  <td>1.6</td>
-                  <td>2016</td>
-                  <td>Oq</td>
-                  <td>3000km</td>
-                  <td><i class="fa-solid fa-arrow-right"></i></td>
-                </tr>
-
-                <tr>
-                  <td>3.</td>
-                  <td>CHEVROLET</td>
-                  <td>Avtomat karobka</td>
-                  <td>Yo'q</td>
-                  <td>1.6</td>
-                  <td>2016</td>
-                  <td>Oq</td>
-                  <td>3000km</td>
-                  <td><i class="fa-solid fa-arrow-right"></i></td>
-                </tr>
-
-                <tr>
-                  <td>4.</td>
-                  <td>CHEVROLET</td>
-                  <td>Avtomat karobka</td>
-                  <td>Yo'q</td>
-                  <td>1.6</td>
-                  <td>2016</td>
-                  <td>Oq</td>
-                  <td>3000km</td>
-                  <td><i class="fa-solid fa-arrow-right"></i></td>
-                </tr>
-
-                <tr>
-                  <td>5.</td>
-                  <td>CHEVROLET</td>
-                  <td>Avtomat karobka</td>
-                  <td>Yo'q</td>
-                  <td>1.6</td>
-                  <td>2016</td>
-                  <td>Oq</td>
-                  <td>3000km</td>
-                  <td><i class="fa-solid fa-arrow-right"></i></td>
-                </tr>
-
-                <tr>
-                  <td>6.</td>
-                  <td>CHEVROLET</td>
-                  <td>Avtomat karobka</td>
-                  <td>Yo'q</td>
-                  <td>1.6</td>
-                  <td>2016</td>
-                  <td>Oq</td>
-                  <td>3000km</td>
-                  <td><i class="fa-solid fa-arrow-right"></i></td>
-                </tr>
-
-              </tbody>
-
-            </table>
-
-          </div>
+            </header>
 
 
+            
+            <section class="service">
 
-          <div class="pagination">
+                <div class="service-card">
 
-            <button>
-              <i class="fa-solid fa-arrow-left"></i>
-            </button>
+                    <div class="service-top">
 
-            <span>1</span>
-            <span>2</span>
-            <span>3</span>
-            <span>...</span>
+                        <div class="service-title">
+                            <span class="title-mark"></span>
+                            <h2>Mashinalar</h2>
+                        </div>
 
-            <button class="next-page">
-              <i class="fa-solid fa-arrow-right"></i>
-            </button>
+                        <div class="service-buttons">
 
-          </div>
+                            <a href="#carModal" class="add-category">
+                                <i class="fa-solid fa-plus"></i>
+                                Kategoriya qo'shish
+                            </a>
 
-        </div>
+                            <button class="add-car" type="button">
+                                <i class="fa-solid fa-plus"></i>
+                                Mashina qo'shish
+                            </button>
 
-      </section>
+                        </div>
 
-    </main>
-
-  </div>
+                    </div>
 
 
+                   
+                    <div class="table-wrapper">
 
-  <div class="modal-overlay" id="categoryModal">
+                        <table>
 
-    <div class="modal-box">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Markasi</th>
+                                    <th>Gearbook</th>
+                                    <th>Tanirovkasi</th>
+                                    <th>Motor</th>
+                                    <th>Year</th>
+                                    <th>Color</th>
+                                    <th>Distance</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
 
-      <div class="modal-header">
+                            <tbody>
 
-        <h2>Kategoriya qo'shish</h2>
+                                <tr>
+                                    <td>1.</td>
+                                    <td>CHEVROLET</td>
+                                    <td>Avtomat karobka</td>
+                                    <td>Yo'q</td>
+                                    <td>1.6</td>
+                                    <td>2016</td>
+                                    <td>Oq</td>
+                                    <td>3000km</td>
+                                    <td><i class="fa-solid fa-arrow-right"></i></td>
+                                </tr>
 
-        <a href="#" class="close-modal">
+                                <tr>
+                                    <td>2.</td>
+                                    <td>CHEVROLET</td>
+                                    <td>Avtomat karobka</td>
+                                    <td>Yo'q</td>
+                                    <td>1.6</td>
+                                    <td>2016</td>
+                                    <td>Oq</td>
+                                    <td>3000km</td>
+                                    <td><i class="fa-solid fa-arrow-right"></i></td>
+                                </tr>
 
-        </a>
+                                <tr>
+                                    <td>3.</td>
+                                    <td>CHEVROLET</td>
+                                    <td>Avtomat karobka</td>
+                                    <td>Yo'q</td>
+                                    <td>1.6</td>
+                                    <td>2016</td>
+                                    <td>Oq</td>
+                                    <td>3000km</td>
+                                    <td><i class="fa-solid fa-arrow-right"></i></td>
+                                </tr>
 
-      </div>
+                                <tr>
+                                    <td>4.</td>
+                                    <td>CHEVROLET</td>
+                                    <td>Avtomat karobka</td>
+                                    <td>Yo'q</td>
+                                    <td>1.6</td>
+                                    <td>2016</td>
+                                    <td>Oq</td>
+                                    <td>3000km</td>
+                                    <td><i class="fa-solid fa-arrow-right"></i></td>
+                                </tr>
 
-      <form class="category-form">
+                                <tr>
+                                    <td>5.</td>
+                                    <td>CHEVROLET</td>
+                                    <td>Avtomat karobka</td>
+                                    <td>Yo'q</td>
+                                    <td>1.6</td>
+                                    <td>2016</td>
+                                    <td>Oq</td>
+                                    <td>3000km</td>
+                                    <td><i class="fa-solid fa-arrow-right"></i></td>
+                                </tr>
 
-        <label for="categoryName">
-          Kategoriya nomi
-        </label>
+                                <tr>
+                                    <td>6.</td>
+                                    <td>CHEVROLET</td>
+                                    <td>Avtomat karobka</td>
+                                    <td>Yo'q</td>
+                                    <td>1.6</td>
+                                    <td>2016</td>
+                                    <td>Oq</td>
+                                    <td>3000km</td>
+                                    <td><i class="fa-solid fa-arrow-right"></i></td>
+                                </tr>
 
-        <input type="text" id="categoryName" placeholder="Kategoriya nomini kiriting" required>
+                            </tbody>
 
-        <button type="submit" class="save-category">
-          Saqlash
-        </button>
+                        </table>
 
-      </form>
+                    </div>
+
+
+                   
+                    <div class="pagination">
+
+                        <button>
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </button>
+
+                        <span>1</span>
+                        <span>2</span>
+                        <span>3</span>
+                        <span>...</span>
+
+                        <button class="next-page">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
 
     </div>
 
-  </div>
+
+    
+    <div class="modal-overlay" id="carModal">
+
+        <div class="car-modal-box">
+
+            <!-- MODAL HEADER -->
+            <div class="car-modal-header">
+
+                <div class="car-modal-title">
+                    <span class="car-title-mark"></span>
+                    <h2>Mashina qo'shish</h2>
+                </div>
+
+                <a href="#" class="car-close-modal">
+                    <i class="fa-solid fa-xmark"></i>
+                </a>
+
+            </div>
+
+
+          
+            <form class="car-form">
+
+                <div class="car-form-fields">
+
+                    <div class="car-field">
+
+                        <label for="carBrand">Markasi</label>
+
+                        <input
+                            type="text"
+                            id="carBrand"
+                            placeholder="Kiriting"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="car-field">
+
+                        <label for="carImage">Rasm 360 ichki makon</label>
+
+                        <label class="car-upload" for="carImage">
+                            <i class="fa-solid fa-camera"></i>
+                            Yuklash
+                        </label>
+
+                        <input
+                            type="file"
+                            id="carImage"
+                            accept="image/*"
+                            hidden
+                        >
+
+                    </div>
+
+                </div>
+
+
+                
+                <div class="car-form-footer">
+
+                    <button type="submit" class="car-save">
+                        Saqlash
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
 
 </body>
-
 </html>
